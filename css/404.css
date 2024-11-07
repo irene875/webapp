@@ -1,0 +1,132 @@
+
+/* Reseteo de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con textura tramada */
+body {
+    font-family: '', sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(https://image.jimcdn.com/app/cms/image/transf/dimension=590x10000:format=jpg/path/s24962788418996d0/image/ida3bd9e7e1c4c9dd/version/1445968196/reuniones-largas-y-aburridas-aorganizarte.jpg); /* Fondo tramado */
+    background-repeat: no-repeat;
+    background-size: cover; /* Asegura que cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed;
+   
+    color: #3b0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Contenedor de contenido central */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.678);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Título grande */
+h1 {
+    font-size: 6rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+/* Párrafo explicativo */
+p {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Botón en forma de estrella */
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    text-decoration: rgb(255, 238, 0);
+    font-size: 1.4rem;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Forma de estrella para el botón */
+.button:before {
+    content: ' ';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid #ff6347;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover del botón */
+.button:hover {
+    background-color: #ff6347;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.8);
+}
+
+.button:hover:before {
+    border-color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Efectos de interactividad con el ratón: seguimiento de mouse */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.3) 10%, transparent 10%);
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+/* Activar el efecto de interactividad al pasar el ratón sobre el cuerpo */
+body:hover::after {
+    opacity: 1;
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .button {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
