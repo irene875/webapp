@@ -1,0 +1,22 @@
+/* Estilo para el título */
+h1 {
+    color: #fff; /* Color blanco para el texto */
+    font-size: 48px; /* Tamaño grande para el título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para el texto */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Espaciado entre letras */
+
+    font-family: 'MyFont';
+    src: url('../assts/fonts/myfont1.woff2') format('woff2');
+      
+}
+
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+}
