@@ -1,6 +1,6 @@
 /* Estilo para el título */
 h1 {
-    color: #fff; /* Color blanco para el texto */
+    color: #1b2068; /* Color blanco para el texto */
     font-size: 48px; /* Tamaño grande para el título */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para el texto */
     margin-bottom: 20px;
@@ -11,11 +11,21 @@ h1 {
       
 }
 
+body {
+    background-color: #DCE8FF; /* Un color gris claro */
+    position: fixed; /* Fijar el menú */
+    text-align: center;
+    margin: 0 auto; 
+}
 
 .menu{
     display: flex;
     gap: 30px;
+    position: fixed; /* Fijar el menú */
+    top: 0; /* Empuja el menú hacia la parte superior */
+    right: 0;
 }
+
 .menu a{
     color: black;
     text-decoration: none;
