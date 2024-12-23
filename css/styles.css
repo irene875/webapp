@@ -10,8 +10,6 @@ h1, p{
 
 body {
     margin: 0;
-    height: 100%;
-    height: calc(100vh - 80px); 
     padding: 40px;
     background-color: #DCE8FF;
 }
@@ -42,15 +40,15 @@ nav{
     display: none;
 }
 .autor{
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 30px;
 }
 .tortuga{
     width: 130px;
     height: 150px;
     position: absolute;
-    top: 150px;
-    right: 30px;
+    top: 160px;
+    right: 15px;
 }
 
 
@@ -58,6 +56,43 @@ nav{
     margin-top: 70px;
 }
 
+.sobre-mi h1{
+    font-size: 30px;
+}
+
+.sobre-mi p{
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.disenio-img, .ilustracion-img{
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacto{
+    margin-top: 40px;
+}
+.contacto-texto{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.redcolocada{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    
+}
+.redcolocada svg{
+    margin-right: 5px;
+}
 /*-------------------------------------------------------------------------------- Estilos para tableta--------------------------------------------------------------------------------*/
 @media (min-width: 768px) {
     
