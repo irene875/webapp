@@ -1,43 +1,46 @@
-h1, p{
+h1, h2, p{ /*Estilos para todos los h1, h2 y p*/
     color: #1b2068; /* Color blanco para el texto */
     margin: 0px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para el texto */
     letter-spacing: 2px; /* Espaciado entre letras */
 
     font-family: 'MyFont';
-    src: url('../assts/fonts/myfont1.woff2') format('woff2');
+    src: url('../assts/fonts/myfont1.woff2') format('woff2'); /* ruta relativa de la font que he creado*/
 }
 
 body {
     margin: 0;
-    padding: 40px;
+    padding: 40px; /* padding que afecta a todo el contenido del body*/
     background-color: #DCE8FF;
 }
 
 
 /*--------------------------------------------------------------------------------- Estilos para movil---------------------------------------------------------------------------------*/
 .logo{
-    width: 40px;
-    height: 40px;
+    width: 40px; /*ancho deseado para el logo pequeño*/
+    height: 40px; /*alto deseado para el logo pequeño*/
 }
-.logo-pequeno-svg{
+.logo-pequeno-svg{ /* queremos el que svg ocupe el contenedor completo*/
     width: 100%;
     height: 100%;
 }
 
 nav{
-    display: none;
+    display: none; /* ocultamos el menu de navegacion en esta version*/
 }
 
 .inicio{
-    width: 100%;
+    width: 100%; /* ancho del contenedor completo*/
+}
+.svg-titulo{
+    display: none;
 }
 .titulo{
     font-size: 20px;
     margin-top: 30px;
 }
 .div-logo-grande{
-    display: none;
+    display: none;  /* ocultamos en logo grande */
 }
 .autor{
     font-size: 32px;
@@ -46,7 +49,7 @@ nav{
 .tortuga{
     width: 130px;
     height: 140px;
-    position: absolute;
+    position: absolute; /* colocamos la tortuga con absolute para que ignore los demas estilos y se coloque donde quiero*/
     top: 160px;
     right: 15px;
 }
@@ -54,30 +57,37 @@ nav{
 
 .sobre-mi{
     margin-top: 70px;
+    margin-bottom: 30px;
 }
 
-.sobre-mi h1{
-    font-size: 30px;
+.h1-contenido{ /*esto afectara a todos lo que tenga la class h1-contenido, que añadire a los h1 de cada seccion*/
+    font-size: 30px; /* tamaño de la letra*/
+}
+.h2-contenido{ /*esto afectara a todos lo que tenga la class h2-contenido, que añadire a los h2 de la seccion ilustracion*/
+    font-size: 20px; /* tamaño de la letra*/
 }
 
-.sobre-mi p{
+.disenio h2{ /*esto, nos situa en el contenedor con class disenio, elegimos las etiquetas h2 y con :first-child, elegimos el primer h2 que haya*/
+    margin-top: 10px;
+}
+
+.sobre-mi p{ /* al poner .sobre-mi p, estamos añadiendo estilos a todas als etiquetas p que haya dentro de los contenedores con class sobre-mi*/
     margin-top: 15px;
     font-size: 12px;
 }
 
-.disenio-img, .ilustracion-img{
+.disenio-img, .ilustracion-img{ /*aplicamos estilos para las fotos*/
     width: 75%;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: inline-block;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    display: flex; /* colocamos display flex para que se dispongan en fila*/
+    flex-direction: column; /* flex-direction: column para que la fila sea en vertical*/
+    align-items: center; /* colocamos el contenido en el centro*/
+    gap: 20px;  /* creamos una separacion entre las fotos*/
 }
 .grupo-grande{
-    display: none;
+    display: none; /*ocultamos la imagen grande*/
 }
 
 .contacto{
@@ -87,7 +97,7 @@ nav{
     margin-top: 10px;
     font-size: 12px;
 }
-.redcolocada{
+.redcolocada{ /* aplicamos efectos a la clase redcolocada que usaremos para poner los svg de las redes y la info de la red en la misma fila*/
     display: flex;
     height: 40px;
     align-items: center;
@@ -97,38 +107,31 @@ nav{
     margin-right: 5px;
 }
 /*-------------------------------------------------------------------------------- Estilos para tableta--------------------------------------------------------------------------------*/
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* esto nos permite crear el responsive para dispositivos con un ancho superior a 768px (tablets)*/
 
     .logo{
-        display: none;
-        width: 40px;
-        height: 40px;
+        display: none; /* ocultamos el logo pequeño*/
     }
-    .logo-pequeno-svg{
-        width: 100%;
-        height: 100%;
-    }
-    
     nav{
-        display: flex;
-        position: absolute;
+        display: flex; /* disposicion en fila para el menu*/
+        position: absolute; /* colocamos en posicion absoluta para que ignore los margenes y paddings*/
         top: 40px;
         right: 40px;
-        gap: 12px;
+        gap: 12px; /*espacio entre las opciones del menu*/
     }
     nav a{
-        text-decoration: none;
+        text-decoration: none; /*quitamos la decoracion de enalces del menu*/
         color: #1b2068;
     }
     nav div{
         padding: 2px;
     }
-    nav div:hover{
+    nav div:hover{ /* esto nos permite resaltar la opcion que estamos eliguendo en el menu, si pasamos el raton por encima cambiara de color*/
         border-radius: 5px;
         background-color: #0f1349;
         
     }
-    nav div:hover a{
+    nav div:hover a{ /* lo mismo pero con la etiqueta a para diferecnciar el texto*/
         color: white;
         
     }
@@ -136,26 +139,29 @@ nav{
     .inicio{
         width: 100%;
     }
+    .svg-titulo{
+        display: none;
+    }
     .titulo{
         font-size: 20px;
         margin-top: 0px;
     }
-    .div-logo-grande{
-        display: flex;
+    .div-logo-grande{ 
+        display: flex; /* mostramos el logo que antes estaba oculto y le damos diplay flex para poder aplicar align items center y colocarlo centrado*/
         align-items: center;
         width: 100%;
         margin: auto;
         margin-top: 30px;
     }
     .logo-grande-svg{
-        width: 20%;
-        margin: auto;
+        width: 20%; /* width:20% para que no ocupe toda la pagina*/
+        margin: auto; /* colocarlo en el centro del contenedor*/
     }
     .autor{
         font-size: 32px;
         margin-top: 30px;
     }
-    .tortuga{
+    .tortuga{ /* hacemos la tortuga mas grande y ajustamos la posicion*/
         width: 160px;
         height: 172px;
         position: absolute;
@@ -175,8 +181,18 @@ nav{
     .sobre-mi p{
         margin-top: 15px;
         font-size: 12px;
+        text-align: justify;
+    }
+
+    .grupo-peque{
+        display: none; /*ocultamos la imagen pequeña*/
     }
     
+    .grupo-grande{
+        display: block; /*mostramos la imagen grande*/
+        width: 100%;
+    }
+
     .disenio-img, .ilustracion-img{
         width: 75%;
         margin: auto;
@@ -188,6 +204,11 @@ nav{
         align-items: center;
         gap: 20px;
     }
+
+    .ilustracion-img img{ /*dentro de los elementos con class ilustracion-img, seleccionamos las img para plicar estilos*/
+        width: 70%;
+        max-width: 400px; /* limite de tamaño para que no sea demasiado grande en tablets grandes*/
+    }
     
     .contacto{
         margin-top: 40px;
@@ -195,7 +216,14 @@ nav{
     .contacto-texto{
         margin-top: 10px;
         font-size: 12px;
+        text-align: justify;
     }
+    .redes {
+        display: flex;
+        justify-content: space-between; /* calcula automaticamente el espacio que debe dejar entre elementyos para que queden iguales */
+        font-size: 12px;
+    }
+    
     .redcolocada{
         display: flex;
         height: 40px;
@@ -209,6 +237,148 @@ nav{
 
 
 /*------------------------------------------------------------------------------- Estilos para ordenador-------------------------------------------------------------------------------*/
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /* esto nos permite crear el responsive para dispositivos con un ancho superior a 1024px (ordenadores)*/
     
+    h1{
+        font-size: 50px;
+    }
+
+    nav{
+        display: flex; /* disposicion en fila para el menu*/
+        position: absolute; /* colocamos en posicion absoluta para que ignore los margenes y paddings*/
+        top: 45px;
+        right: 40px;
+        gap: 12px; /*espacio entre las opciones del menu*/
+        font-size: 20px;
+    }
+    nav a{
+        text-decoration: none; /*quitamos la decoracion de enalces del menu*/
+        color: #1b2068;
+    }
+    nav div{
+        padding: 2px;
+    }
+    nav div:hover{ /* esto nos permite resaltar la opcion que estamos eliguendo en el menu, si pasamos el raton por encima cambiara de color*/
+        border-radius: 5px;
+        background-color: #0f1349;
+        
+    }
+    nav div:hover a{ /* lo mismo pero con la etiqueta a para diferecnciar el texto*/
+        color: white;
+    }
+    
+    .inicio{
+        width: 100%;
+    }
+    .logo-titulo{
+        display: flex;
+        height: 40px;
+    }
+    .svg-titulo{
+        width: 40px; /*ancho deseado para el logo pequeño*/
+        height: 40px; /*alto deseado para el logo pequeño*/
+        display: block;
+    }
+    .titulo{
+        margin-top: 0px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .div-logo-grande{ 
+        display: flex; /* mostramos el logo que antes estaba oculto y le damos diplay flex para poder aplicar align items center y colocarlo centrado*/
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .logo-grande-svg{
+        width: 20%; /* width:20% para que no ocupe toda la pagina*/
+        margin: auto; /* colocarlo en el centro del contenedor*/
+    }
+    .autor{
+        font-size: 32px;
+        margin-top: 30px;
+    }
+    .tortuga{ /* hacemos la tortuga mas grande y ajustamos la posicion*/
+        width: 320px;
+        height: 344px;
+        position: absolute;
+        top: 180px;
+        right: 0px;
+    }
+        
+    
+    .sobre-mi{
+        margin-top: 70px;
+    }
+    
+    .sobre-mi h1{
+        font-size: 30px;
+    }
+    
+    .sobre-mi p{
+        margin-top: 15px;
+        font-size: 17px;
+        text-align: justify;
+    }
+
+    .grupo-peque{
+        display: none; /*ocultamos la imagen pequeña*/
+    }
+    
+    .grupo-grande{
+        display: block; /*mostramos la imagen grande*/
+        width: 100%;
+    }
+
+    .disenio-img{
+        width: 75%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .ilustracion-img {
+        display: grid; /* Usa grid layout */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
+        gap: 10px; /* Espacio entre las imágenes (ajusta según prefieras) */
+    }
+    
+    
+    .ilustracion-img img{ /*dentro de los elementos con class ilustracion-img, seleccionamos las img para plicar estilos*/
+        width: 100%; /* Asegúrate de que las imágenes sean responsivas */
+        height: auto; /* Mantén la proporción de las imágenes */
+        max-width: none;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .contacto{
+        margin-top: 40px;
+    }
+    .contacto-texto{
+        margin-top: 10px;
+        font-size: 17px;
+        text-align: justify;
+    }
+    .redes {
+        display: flex;
+        justify-content: space-between; /* calcula automaticamente el espacio que debe dejar entre elementyos para que queden iguales */
+        font-size: 17px;
+    }
+    
+    .redcolocada{
+        display: flex;
+        height: 40px;
+        align-items: center;
+        
+    }
+    .redcolocada svg{
+        margin-right: 5px;
+    }
 }
