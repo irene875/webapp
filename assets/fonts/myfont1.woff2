@@ -1,7 +1,6 @@
 @font-face {
-  font-family: 'MiTipografia';
-  src: url('mi-tipografia.woff2') format('woff2');
-
-  font-weight: normal;
-  font-style: normal;  
-
+    font-family: "MiTipografia";
+    src: url('../assets/fonts/myfont1.woff2') format('woff2'); 
+    font-weight: 300; 
+    font-style: normal; 
+}
